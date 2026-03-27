@@ -1,0 +1,134 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+/* GLOBAL */
+body {
+    background-color: #000;
+    color: #00ff9c;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* LOGO KALI */
+.kali-logo {
+    width: 120px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 12px #00ff9c);
+}
+
+/* TITRE */
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00ff9c;
+}
+
+/* CURSEUR */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.cursor::after {
+    content: "_";
+    animation: blink 1s infinite;
+}
+
+/* DEV BANNER */
+.dev-banner {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #00ff9c;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00ff9c;
+}
+
+/* LOGOS COINS */
+.corner-logo {
+    position: fixed;
+    top: 120px;
+    width: 80px;
+    filter: drop-shadow(0 0 10px #00ff9c);
+    opacity: 0.9;
+    z-index: 10;
+}
+.corner-logo.left { left: 20px; }
+.corner-logo.right { right: 20px; }
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid #00ff9c;
+    box-shadow: 0 0 20px rgba(0,255,156,0.15);
+}
+
+/* TERMINAL */
+.terminal {
+    white-space: pre-wrap;
+    color: #66ffcc;
+}
+
+/* PROGRESS */
+.skill { margin-bottom: 25px; }
+.bar {
+    width: 100%;
+    height: 12px;
+    border: 1px solid #00ff9c;
+    background: #00332a;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background: #00ff9c;
+    box-shadow: 0 0 10px #00ff9c;
+    width: 0;
+}
+
+/* ANIMATIONS BARRES */
+.linux   { animation: load20 2s forwards; }
+.reseaux { animation: load25 2s forwards; }
+.web     { animation: load15 2s forwards; }
+
+@keyframes load20 { to { width: 20%; } }
+@keyframes load25 { to { width: 25%; } }
+@keyframes load15 { to { width: 15%; } }
+
+/* APPARITION */
+.fade {
+    animation: fadeUp 1s ease forwards;
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #00ff9c;
+    color: #66ffcc;
+}
+.code-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    transition: 0.3s;
+}
+
+.code-btn:hover {
+    background-color: #00ff9c;
+    color: #000;
+}
